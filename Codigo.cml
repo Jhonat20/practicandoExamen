@@ -1,14 +1,13 @@
-BoundedContext ventas
-BoundedContext gestionCliente
-BoundedContext gestionpagos
+ContextMap biblioteca{
+	type SYSTEM_LANDSCAPE
+	state TO_BE
+	contains gestionlibros, gestionrevistas,gestionprestamos,gestiondevolucones
 
-ContextMap prueba{
-
-contains ventas,gestionCliente,gestionpagos
-
-ventas -> gestionCliente
+    
 
 }
 
-
-
+BoundedContext gestionlibros
+BoundedContext gestionrevistas
+BoundedContext gestionprestamos
+BoundedContext gestiondevolucones
