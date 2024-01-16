@@ -1,6 +1,14 @@
 image:
   file: .gitpot.dockerfile
-  
+
+tasks:
+  - init: | 
+      sudo apt-get update
+      sudo apt-get install -y graphviz
+      pip install context-mapper
+  - name: gp validate
+    command: |
+      echo "ejecutando gp validate"
 vscode:
   extensions:
     - contextmapper.context-mapper-vscode-extension
