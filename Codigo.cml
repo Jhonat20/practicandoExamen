@@ -3,11 +3,23 @@ ContextMap biblioteca{
 	state TO_BE
 	contains gestionlibros, gestionrevistas,gestionprestamos,gestiondevolucones
 
+    gestionlibros Shared-Kernel gestionprestamos
+
     
 
 }
+Domain comercio{
+Subdomain gestiondevolucones{
+    type CORE_DOMAIN
+    
+    }
+
+}
+
+
 
 BoundedContext gestionlibros
 BoundedContext gestionrevistas
 BoundedContext gestionprestamos
 BoundedContext gestiondevolucones
+
